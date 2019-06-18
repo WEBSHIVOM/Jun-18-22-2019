@@ -1,5 +1,5 @@
 
-* Implement the forumla a^2 + b^2 + 2ab
+* Implement the formula a^2 + b^2 + 2ab
 * You have a=10 and b=12
 
 ```java
