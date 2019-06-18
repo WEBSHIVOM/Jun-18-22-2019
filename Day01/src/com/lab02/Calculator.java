@@ -12,6 +12,7 @@ public class Calculator {
 		return operation.perform(num1, num2);
 	}
 }
+
 @FunctionalInterface
 interface Operation {
 	int perform(int a, int b);
