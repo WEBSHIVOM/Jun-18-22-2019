@@ -21,7 +21,13 @@ public class Main {
 					.andThen(_2ab)
 					.apply(new Input(10, 12, 0));
 		
-		System.out.println(formula.getResult());
+		Input formula2 = 
+				bSquare
+					.andThen(_2ab)
+					.andThen(aSquare)
+					.apply(new Input(10, 12, 0));
+		
+		System.out.println(formula2.getResult());
 	}
 
 }

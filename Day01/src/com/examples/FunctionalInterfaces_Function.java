@@ -1,6 +1,8 @@
 package com.examples;
 
+import java.util.function.BiFunction;
 import java.util.function.Function;
+import java.util.function.IntFunction;
 
 public class FunctionalInterfaces_Function {
 
@@ -11,6 +13,16 @@ public class FunctionalInterfaces_Function {
 		Function<Integer, Integer> inc = (num) -> num + 1;
 		int result = inc.apply(12);
 		System.out.println(result);
+		
+		
+		IntFunction<Integer> increment = (num) -> num + 1;
+		increment.apply(13);
+		
+		BiFunction<Integer, Integer, Boolean> divisibleBy 
+				= (num, divisor) -> num % divisor == 0;
+		divisibleBy.apply(100, 5);
+		
+		
 		
 		Function<Integer, Boolean> isEven = (num) -> num % 2 == 0;
 		

@@ -17,6 +17,7 @@ public class Main {
 	}
 	
 	
+	
 	public static void declarativeStyle() {
 		final double total = items
 			.stream()
@@ -26,6 +27,7 @@ public class Main {
 			.get();
 		System.out.println("Total: " + total);
 	}
+	
 	
 	public static void imperativeStyle() {
 		double total = 0;
