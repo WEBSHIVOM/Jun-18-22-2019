@@ -16,6 +16,7 @@ public class Main {
 		declarativeStyle();
 	}
 	
+	
 	public static void declarativeStyle() {
 		final double total = items
 			.stream()
