@@ -32,8 +32,11 @@ public class Main {
 		return a + b;
 	}
 	public static void declarativeStyle2() {
-		//Predicate<Item> pricePredicate = item -> item.getPrice() > 20;
-		Predicate<Item> pricePredicate = Main::filterByPrice;
+		Predicate<Item> pricePredicate = item -> item.getPrice() > 20;
+		Predicate<Item> pricePredicate2 = item -> Main.filterByPrice(item);
+		Predicate<Item> pricePredicate3 = Main::filterByPrice;
+		
+		//Main::filterByPrice;
 		
 //		Function<Item, Double> discountFunction 
 //				= item -> item.getPrice() - item.getPrice() * 0.1;
