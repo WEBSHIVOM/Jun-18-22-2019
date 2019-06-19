@@ -7,12 +7,13 @@ public class WorkingOfStream {
 
 	public static void main(String[] args) {
 		List<String> langs = 
-				Arrays.asList("Java", "Ruby", "JavaScript", "Scala", "Clojure");
+				Arrays.asList("Java", "Joomla", "Ruby", "JavaScript", "Scala", "Clojure");
 		
-		//Print all the languages that begin with J
+		//Print only one language that begin with J
 		//And length greater than 5
 		
-		langs
+		//Lazy evaluation
+		String lang = langs
 			.stream()
 			.filter(e -> {
 				System.out.println("****J filter called for " + e);
@@ -22,9 +23,14 @@ public class WorkingOfStream {
 				System.out.println("----Length filter called for " + e);
 				return e.length() > 5;	
 			})
-			.forEach(e -> {
-				System.out.println(e);
-			});
+			.findAny()
+			.get();
+		
+		System.out.println(lang);
+		
+//			.forEach(e -> {
+//				System.out.println(e);
+//			});
 	}
 
 }
